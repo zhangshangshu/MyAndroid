@@ -3,8 +3,11 @@ package com.zss.myandroid;
 import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
+import android.view.Gravity;
 
 import com.tencent.bugly.crashreport.CrashReport;
+import com.zss.myandroid.util.ToastUtils;
+import com.zss.myandroid.util.Utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -26,6 +29,13 @@ public class MyApplication extends Application {
         boolean isDebug = true;
         // 初始化Bugly
         CrashReport.initCrashReport(context, "87ca6e0a2e", isDebug, strategy);
+
+
+        Utils.init(this);
+        //配置ToastUtils的相关的属性
+        ToastUtils.setGravity(Gravity.TOP,0, (int) (80 * Utils.getApp().getResources().getDisplayMetrics().density + 0.5));
+        ToastUtils.setBgColor(getResources().getColor(R.color.colorWhite));
+        ToastUtils.setMsgColor(getResources().getColor(R.color.colorAccent));
     }
 
     /**

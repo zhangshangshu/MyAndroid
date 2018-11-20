@@ -3,7 +3,7 @@ package com.zss.myandroid.test3;
 public class Test3 {
     int a = 1;
     int b = 3;
-    int c = 1;
+    int c = 3;
 
     private void test1(){}
 

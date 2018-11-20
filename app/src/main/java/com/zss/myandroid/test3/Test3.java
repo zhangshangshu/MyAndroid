@@ -1,0 +1,5 @@
+package com.zss.myandroid.test3;
+
+public class Test3 {
+    int a = 2;
+}

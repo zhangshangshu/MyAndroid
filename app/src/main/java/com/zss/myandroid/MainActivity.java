@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tencent.bugly.crashreport.CrashReport;
+import com.zss.myandroid.gson.GsonTest3;
 import com.zss.myandroid.webview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -26,7 +27,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBugly.setOnClickListener(this);
         btnAnimSet.setOnClickListener(this);
         btnWebView.setOnClickListener(this);
+
+//        GsonTest1.test1();
+//        GsonTest1.test2();
+
+        GsonTest3.test3();
+        GsonTest3.test4();
+        GsonTest3.test5();
+//        test1();
+//        test();
+//        Add();
+//        System.out.println();
+//        System.out.println();
+//        Sub();
     }
+
+    int i = 0;
+    private void test(){
+        for(int j=0;j<=99;j++) {
+            if (i == 50) {
+                System.out.println(i);
+            } else {
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+
+    private void Add(){
+        for(int i=0;i<=99;i++){
+            System.out.println(i);
+        }
+    }
+
+    private void Sub(){
+        for(int i = 99;i>=0;i--){
+            System.out.println(i);
+        }
+    }
+
 
     @Override
     public void onClick(View v) {

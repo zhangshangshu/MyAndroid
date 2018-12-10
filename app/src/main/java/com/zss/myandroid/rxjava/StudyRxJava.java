@@ -26,7 +26,7 @@ public class StudyRxJava {
     /**
      * Observer 即观察者，它决定事件触发的时候将有怎样的行为。
      */
-    public void guanCaZhe(){
+    public void guanCaZhe() {
         //第一种方式
         Observer<String> observer = new Observer<String>() {
             @Override
@@ -85,7 +85,7 @@ public class StudyRxJava {
     /**
      * Observable 即被观察者，它决定什么时候触发事件以及触发怎样的事件。
      */
-    public void beiGuanCaZhe(){
+    public void beiGuanCaZhe() {
         /**
          * create() 方法是 RxJava 最基本的创造事件序列的方法。
          * 使用 create() 方法来创建一个 Observable ，并为它定义事件触发规则。
@@ -119,7 +119,7 @@ public class StudyRxJava {
         Observable observable3 = Observable.from(words);
     }
 
-    public void buWanZhengDingYiHuiDiao(){
+    public void buWanZhengDingYiHuiDiao() {
         /**
          * 除了 subscribe(Observer) 和 subscribe(Subscriber) ，subscribe() 还支持不完整定义的回调
          */
@@ -155,8 +155,8 @@ public class StudyRxJava {
         //observable.subscribe(onNextAction, onErrorAction, onCompletedAction);
     }
 
-    public void test(){
-        Observable o = Observable.create(new Observable.OnSubscribe<String>(){
+    public void test() {
+        Observable o = Observable.create(new Observable.OnSubscribe<String>() {
 
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -179,7 +179,7 @@ public class StudyRxJava {
 
             @Override
             public void onNext(String s) {
-                Log.i(TAG, "onNext: "+s);
+                Log.i(TAG, "onNext: " + s);
             }
         };
         o.subscribe(observer);
@@ -189,8 +189,8 @@ public class StudyRxJava {
      * 打印字符串数组
      * 将字符串数组 names 中的所有字符串依次打印出来：
      */
-    public void testA(){
-        String[] names = {"a","b","c"};
+    public void testA() {
+        String[] names = {"a", "b", "c"};
         Observable.from(names).subscribe(new Action1<String>() {
             @Override
             public void call(String s) {
@@ -204,7 +204,8 @@ public class StudyRxJava {
      * 由指定的一个 drawable 文件 id drawableRes 取得图片，并显示在 ImageView 中，并在出现异常的时候打印 Toast 报错：
      */
     private Context context;
-    public void testB(){
+
+    public void testB() {
         final int drawableRes = R.mipmap.ic_launcher;
         final ImageView imageView = new ImageView(context);
         Observable.create(new Observable.OnSubscribe<Drawable>() {
@@ -240,14 +241,14 @@ public class StudyRxJava {
      * 事实上，这种在 subscribe() 之前写上两句 subscribeOn(Scheduler.io()) 和 observeOn(AndroidSchedulers.mainThread()) 的使用方式非常常见，
      * 它适用于多数的 『后台线程取数据，主线程显示』的程序策略。
      */
-    public void testScheduler1(){
-        Observable.just(1,2,3,4)
+    public void testScheduler1() {
+        Observable.just(1, 2, 3, 4)
                 .subscribeOn(Schedulers.io())// 指定 subscribe() 发生在 IO 线程
                 .observeOn(AndroidSchedulers.mainThread())// 指定 Subscriber 的回调发生在主线程
                 .subscribe(new Action1<Integer>() {
                     @Override
                     public void call(Integer integer) {
-                        Log.i(TAG,  "number:" + integer);
+                        Log.i(TAG, "number:" + integer);
                     }
                 });
     }
@@ -257,13 +258,14 @@ public class StudyRxJava {
      * 那么，加载图片将会发生在 IO 线程，而设置图片则被设定在了主线程。
      * 这就意味着，即使加载图片耗费了几十甚至几百毫秒的时间，也不会造成丝毫界面的卡顿。
      */
-    public void testScheduler2(){
-        int drawableRes = R.mipmap.ic_launcher;
+    public void testScheduler2() {
+        final int drawableRes = R.mipmap.ic_launcher;
         final ImageView imageView = new ImageView(context);
         Observable.create(new Observable.OnSubscribe<Drawable>() {
             @Override
             public void call(Subscriber<? super Drawable> subscriber) {
-                Drawable drawable = context.getTheme().getDrawable(drawableRes));
+                Drawable drawable = null;
+                drawable = context.getTheme().getDrawable(drawableRes);
                 subscriber.onNext(drawable);
                 subscriber.onCompleted();
             }
@@ -288,7 +290,7 @@ public class StudyRxJava {
     }
 
     //4.变换
-    public void testMap(){
+    public void testMap() {
         final ImageView imageView = new ImageView(context);
         Observable.just("images/logo.png") // 输入类型 String
                 .map(new Func1<String, Bitmap>() {
@@ -306,7 +308,7 @@ public class StudyRxJava {
                 });
     }
 
-    public void testFlatMap(){
+    public void testFlatMap() {
 
     }
 }

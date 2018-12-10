@@ -1,14 +1,15 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-buildscript {
+buildscript {// buildscript中的声明是gradle脚本自身需要使用的资源。可以声明的资源包括依赖项、第三方插件、maven仓库地址等
     
-    repositories {
+    repositories {//顾名思义就是仓库的意思啦，而jcenter()、maven()和google()就是托管第三方插件的平台
         google()
         jcenter()
     }
-    dependencies {
+    dependencies { //当然配置了仓库还不够，我们还需要在dependencies{}里面的配置里，把需要配置的依赖用classpath配置上，
+                  // 因为这个dependencies在buildscript{}里面，所以代表的是Gradle需要的插件。
+
         classpath 'com.android.tools.build:gradle:3.1.2'
-        
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,12 +17,23 @@ buildscript {
 }
 
 allprojects {
-    repositories {
+
+    repositories {//allprojects块的repositories用于多项目构建，为所有项目提供共同所需依赖包。
+                 // 而子项目可以配置自己的repositories以获取自己独需的依赖包。
         google()
         jcenter()
     }
 }
 
+//奇怪，有人会问，为什么同一个build.gradle（Project）文件中buildscript和allprojects里面的内容基本上是一样的呢，他们的区别在哪？
+
+//buildscript和allprojects的作用和区别：
+//buildscript中的声明是gradle脚本自身需要使用的资源，就是说他是管家自己需要的资源，跟你这个大少爷其实并没有什么关系。
+//而allprojects声明的却是你所有module所需要使用的资源，就是说如果大少爷你的每个module都需要用同一个第三库的时候，你可以在allprojects里面声明。
+
+
+//运行gradle clean时，执行此处定义的task。该任务继承自Delete，删除根目录中的build目录。相当于执行Delete.delete(rootProject.buildDir)。
+//其实这个任务的执行就是可以删除生成的Build文件的，跟Android Studio的clean是一个道理。
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

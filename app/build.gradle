@@ -162,6 +162,8 @@ dependencies {
     //gradle 3.0中依赖implementation、api的区别：
     //其实api跟以前的compile没什么区别，将compile全部改成api是不会错的；
     //而implementation指令依赖是不会传递的，也就是说当前引用的第三方库仅限于本module内使用，其他module需要重新添加依赖才能用
-
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
 }

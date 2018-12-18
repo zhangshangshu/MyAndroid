@@ -1,4 +1,4 @@
-package com.zss.myandroid.retrofit;
+package com.zss.myandroid.retrofit2;
 
 import java.util.List;
 import java.util.Map;
@@ -116,4 +116,5 @@ public interface BlogService {
      */
     @POST("blog/post")
     Observable<Result<List<Blog>>> getBlogs();
+
 }

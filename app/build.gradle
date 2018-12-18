@@ -154,10 +154,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     implementation 'com.tencent.bugly:crashreport:latest.release'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    api 'io.reactivex:rxjava:1.0.14'
-    api 'io.reactivex:rxandroid:1.0.1'
+//    api 'io.reactivex:rxjava:1.0.14'
+//    api 'io.reactivex:rxandroid:1.0.1'
     //到了gradle3.0以后build.gradle中的依赖默认为implementation，而不是之前的compile。另外，还有依赖指令api。
     //gradle 3.0中依赖implementation、api的区别：
     //其实api跟以前的compile没什么区别，将compile全部改成api是不会错的；
@@ -166,4 +166,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
 }

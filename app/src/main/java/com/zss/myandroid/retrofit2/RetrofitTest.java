@@ -1,4 +1,4 @@
-package com.zss.myandroid.retrofit;
+package com.zss.myandroid.retrofit2;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -264,4 +264,5 @@ public class RetrofitTest {
             }
         });
     }
+
 }

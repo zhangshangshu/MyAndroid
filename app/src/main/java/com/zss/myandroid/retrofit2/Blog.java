@@ -1,4 +1,4 @@
-package com.zss.myandroid.retrofit;
+package com.zss.myandroid.retrofit2;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package com.zss.myandroid.retrofit;
+package com.zss.myandroid.retrofit2;
 
 public class Result<T> {
     public int code;

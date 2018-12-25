@@ -8,6 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -18,9 +22,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import rx.Observable;
-import rx.Subscriber;
-import rx.schedulers.Schedulers;
 
 public class RetrofitTest {
 
@@ -246,23 +247,47 @@ public class RetrofitTest {
 
     public void getBlogs(){
         Observable<Result<List<Blog>>> observable = getBlogService(RETROFIT_GSON_RXJAVA).getBlogs();
+        //RxJava 2.0的写法
         observable.subscribeOn(Schedulers.io())
-                .subscribe(new Subscriber<Result<List<Blog>>>() {
-            @Override
-            public void onCompleted() {
+                .subscribe(new Observer<Result<List<Blog>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
 
-            }
+                    }
 
-            @Override
-            public void onError(Throwable e) {
+                    @Override
+                    public void onNext(Result<List<Blog>> listResult) {
 
-            }
+                    }
 
-            @Override
-            public void onNext(Result<List<Blog>> listResult) {
+                    @Override
+                    public void onError(Throwable e) {
 
-            }
-        });
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        //RxJava 1.0的写法
+        //        observable.subscribeOn(Schedulers.io())
+//                .subscribe(new Subscriber<Result<List<Blog>>>() {
+//            @Override
+//            public void onCompleted() {
+//
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override
+//            public void onNext(Result<List<Blog>> listResult) {
+//
+//            }
+//        });
     }
 
 }

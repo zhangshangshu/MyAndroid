@@ -19,6 +19,9 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
+/**
+ * RxJava 1.0 的学习
+ */
 public class StudyRxJava {
 
     private static final String TAG = "StudyRxJava";

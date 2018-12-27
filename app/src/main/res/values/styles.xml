@@ -11,4 +11,27 @@
         <item name="android:listDivider">@drawable/divider_bg</item>
     </style>
 
+    <!--status状态栏，全屏，不保留状态栏文字(Splash页面，欢迎页面)-->
+    <style name="StatusBar1ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <!--<style name="StatusBar1ActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="StatusBar2ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    </style>
+
+    <style name="StatusBar3ActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="StatusBar4ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    </style>
 </resources>

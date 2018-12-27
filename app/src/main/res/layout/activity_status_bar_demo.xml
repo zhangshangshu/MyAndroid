@@ -4,35 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".statusbar.StatusBarDemoActivity">
     <Button
-        android:id="@+id/btn_bugly"
+        android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="异常测试"/>
+        android:text="全屏，不保留状态栏文字(Splash页面，欢迎页面)"/>
     <Button
-        android:id="@+id/btn_animation_set"
+        android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="视图动画集合"/>
-
+        android:text="全屏保留状态栏文字(页面上部有Banner图)"/>
     <Button
-        android:id="@+id/btn_webview"
+        android:id="@+id/btn_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="webview"/>
-
+        android:text="标题栏与状态栏颜色一致 xml中配置"/>
     <Button
-        android:id="@+id/btn_recycler_view"
+        android:id="@+id/btn_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RecyclerView"/>
-
-    <Button
-        android:id="@+id/btn_status_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="statusbar状态栏"/>
+        android:text="Fragment 与 状态栏"/>
 </LinearLayout>

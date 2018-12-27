@@ -8,12 +8,16 @@ import android.widget.Button;
 
 import com.tencent.bugly.crashreport.CrashReport;
 import com.zss.myandroid.gson.GsonTest3;
+import com.zss.myandroid.recyclerview.RecyclerViewActivity;
+import com.zss.myandroid.statusbar.StatusBarDemoActivity;
 import com.zss.myandroid.webview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnBugly;
     private Button btnAnimSet;
     private Button btnWebView;
+    private Button btnRecyclerView;
+    private Button btnStatusBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +27,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBugly = findViewById(R.id.btn_bugly);
         btnAnimSet = findViewById(R.id.btn_animation_set);
         btnWebView = findViewById(R.id.btn_webview);
+        btnRecyclerView = findViewById(R.id.btn_recycler_view);
+        btnStatusBar = findViewById(R.id.btn_status_bar);
 
         btnBugly.setOnClickListener(this);
         btnAnimSet.setOnClickListener(this);
         btnWebView.setOnClickListener(this);
+        btnRecyclerView.setOnClickListener(this);
+        btnStatusBar.setOnClickListener(this);
 
 //        GsonTest1.test1();
 //        GsonTest1.test2();
@@ -78,6 +86,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_webview:
                 startActivity(new Intent(MainActivity.this,WebViewActivity.class));
+                break;
+            case R.id.btn_recycler_view:
+                startActivity(new Intent(MainActivity.this,RecyclerViewActivity.class));
+                break;
+            case R.id.btn_status_bar:
+                startActivity(new Intent(MainActivity.this, StatusBarDemoActivity.class));
                 break;
         }
     }

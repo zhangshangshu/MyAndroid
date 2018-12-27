@@ -17,17 +17,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".AnimationSetActivity" />
-        <activity android:name=".webview.WebViewActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AnimationSetActivity" />
+        <activity android:name=".webview.WebViewActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
+        <activity android:name=".statusbar.StatusBarDemoActivity" />
+        <activity
+            android:name=".statusbar.StatusBar1Activity"
+            android:theme="@style/StatusBar1ActivityTheme" />
+        <activity
+            android:name=".statusbar.StatusBar2Activity"
+            android:theme="@style/StatusBar2ActivityTheme" />
+        <activity
+            android:name=".statusbar.StatusBar3Activity"
+            android:theme="@style/StatusBar3ActivityTheme" />
+        <activity
+            android:name=".statusbar.StatusBar4Activity"
+            android:theme="@style/StatusBar4ActivityTheme" />
     </application>
 
 </manifest>

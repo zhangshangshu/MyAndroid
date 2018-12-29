@@ -39,6 +39,20 @@
         <activity
             android:name=".statusbar.StatusBar4Activity"
             android:theme="@style/StatusBar4ActivityTheme" />
+        <activity android:name=".drawerlayout.DrawerLayoutActivity" />
+        <activity
+            android:name=".drawerlayout.DrawNaviTool1Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawerlayout.DrawAboveToolActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawerlayout.DrawNaviTool2Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawerlayout.NavigationViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".drawerlayout.DrawerDemoActivity" />
     </application>
 
 </manifest>

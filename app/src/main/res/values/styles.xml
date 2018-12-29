@@ -9,6 +9,7 @@
 
         <!--RecyclerView分割线-->
         <item name="android:listDivider">@drawable/divider_bg</item>
+
     </style>
 
     <!--status状态栏，全屏，不保留状态栏文字(Splash页面，欢迎页面)-->
@@ -33,5 +34,11 @@
     </style>
 
     <style name="StatusBar4ActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    </style>
+
+    <!-- DrawerLayout 中 设置 Toolbar 作为系统的 ActionBar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

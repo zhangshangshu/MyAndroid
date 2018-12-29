@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id1"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item1" />
+
+    <!--android:checked="true" 设置当前选中，文字高亮 -->
+    <item
+        android:id="@+id/id2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item2"
+        android:checked="true"/>
+
+    <!--group分组可以设置分界线，可设置单选-->
+    <group
+        android:id="@+id/g3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/id3"
+            android:icon="@mipmap/ic_launcher"
+            android:title="item3" />
+        <item
+            android:id="@+id/id4"
+            android:icon="@mipmap/ic_launcher"
+            android:title="item4" />
+    </group>
+
+    <item
+        android:id="@+id/id5"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item5" />
+
+    <item
+        android:id="@+id/id6"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item6" />
+
+    <group android:id="@+id/g7">
+        <item
+            android:id="@+id/id7"
+            android:icon="@mipmap/ic_launcher"
+            android:title="item7" />
+    </group>
+
+    <!--当item超过一定数量，可滑动-->
+
+    <item
+        android:id="@+id/id8"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item8" />
+
+    <item
+        android:id="@+id/id9"
+        android:icon="@mipmap/ic_launcher"
+        android:title="item9" />
+
+    <!--这里设置一个分组的标题，有分界线，这里设置图标是无效的-->
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/id10"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item10" />
+
+            <item
+                android:id="@+id/id11"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item11" />
+
+            <item
+                android:id="@+id/id12"
+                android:icon="@mipmap/ic_launcher"
+                android:title="item12" />
+        </menu>
+    </item>
+
+
+    <!--这种方式，也不能实现：分组含标题并且点击item后有选中背景的效果-->
+    <!--<group-->
+        <!--android:checkableBehavior="single">-->
+        <!--&lt;!&ndash;android:checked="true" 设为选中&ndash;&gt;-->
+        <!--<item-->
+            <!--android:id="@+id/drawer_home"-->
+            <!--android:checked="true"-->
+            <!--android:icon="@mipmap/ic_launcher"-->
+            <!--android:title="Home"/>-->
+        <!--&lt;!&ndash;设置标题&ndash;&gt;-->
+        <!--<item-->
+            <!--android:id="@+id/section"-->
+            <!--android:icon="@mipmap/ic_launcher"-->
+            <!--android:title="分组1">-->
+            <!--<menu>-->
+                <!--<item-->
+                    <!--android:id="@+id/drawer_favourite"-->
+                    <!--android:icon="@mipmap/ic_launcher"-->
+                    <!--android:title="item12"/>-->
+
+                <!--<item-->
+                    <!--android:id="@+id/drawer_downloaded"-->
+                    <!--android:icon="@mipmap/ic_launcher"-->
+                    <!--android:title="item12"/>-->
+            <!--</menu>-->
+        <!--</item>-->
+        <!--&lt;!&ndash;设置标题&ndash;&gt;-->
+        <!--<item-->
+            <!--android:id="@+id/section2"-->
+            <!--android:title="分组2">-->
+            <!--<menu>-->
+                <!--<item-->
+                    <!--android:id="@+id/drawer_more"-->
+                    <!--android:icon="@mipmap/ic_launcher"-->
+                    <!--android:title="item12"/>-->
+
+                <!--<item-->
+                    <!--android:id="@+id/drawer_settings"-->
+                    <!--android:icon="@mipmap/ic_launcher"-->
+                    <!--android:title="item12"/>-->
+            <!--</menu>-->
+        <!--</item>-->
+    <!--</group>-->
+
+</menu>

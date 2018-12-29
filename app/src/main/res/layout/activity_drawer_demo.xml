@@ -5,29 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".statusbar.StatusBarDemoActivity">
+    tools:context=".drawerlayout.DrawerDemoActivity">
     <Button
-        android:id="@+id/btn_1"
+        android:id="@+id/btn_drawer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="全屏，不保留状态栏文字(Splash页面，欢迎页面)"/>
+        android:text="DrawerLayout"/>
     <Button
-        android:id="@+id/btn_2"
+        android:id="@+id/btn_drawer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="全屏保留状态栏文字(页面上部有Banner图)"/>
+        android:text="DrawerLayout + NavigationView + Toolbar "/>
+
     <Button
-        android:id="@+id/btn_3"
+        android:id="@+id/btn_drawer3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="标题栏与状态栏颜色一致 xml中配置"/>
+        android:text="DrawerLayout 在 Toolbar 下面"/>
+
     <Button
-        android:id="@+id/btn_4"
+        android:id="@+id/btn_drawer4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Fragment 与 状态栏"/>
+        android:text="DrawerLayout 在 Toolbar 下面 , 不显示Home图标"/>
+
+    <Button
+        android:id="@+id/btn_drawer5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="NavigationView"/>
 </LinearLayout>

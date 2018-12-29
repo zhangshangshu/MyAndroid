@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <!-- android:fitsSystemWindows="true" 加上这行
+           会使侧滑布局充满整个window的高度，会发现状态条会遮盖了这个侧滑布局内容的一部分，而主内容布局则在状态条的正下方。（主题设置了无标题栏）
+           只有顶层布局设置这个属性才有效，如果只是NavigationView设置是无效的。
+           当顶层布局设置这个属性了，则NavigationView不需要设置-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/activity_navigation_menu" />
+    <!-- android:fitsSystemWindows="true"
+        外层布局设置该属性，这里就不需要设置了。
+        外层布局没有设置该属性，这里设不设置都无效的。-->
+</android.support.v4.widget.DrawerLayout>

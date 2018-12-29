@@ -11,28 +11,40 @@
         android:id="@+id/btn_bugly"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="异常测试"/>
     <Button
         android:id="@+id/btn_animation_set"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="视图动画集合"/>
 
     <Button
         android:id="@+id/btn_webview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="webview"/>
+        android:textAllCaps="false"
+        android:text="WebView"/>
 
     <Button
         android:id="@+id/btn_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="RecyclerView"/>
 
     <Button
         android:id="@+id/btn_status_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="statusbar状态栏"/>
+        android:textAllCaps="false"
+        android:text="Statusbar状态栏"/>
+
+    <Button
+        android:id="@+id/btn_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="DrawerLayout"/>
 </LinearLayout>

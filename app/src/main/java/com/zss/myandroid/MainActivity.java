@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tencent.bugly.crashreport.CrashReport;
+import com.zss.myandroid.coordinatorlayout.CoordinatorLayoutDemoActivity;
 import com.zss.myandroid.drawerlayout.DrawerDemoActivity;
 import com.zss.myandroid.gson.GsonTest3;
 import com.zss.myandroid.recyclerview.RecyclerViewActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnRecyclerView;
     private Button btnStatusBar;
     private Button btnDrawer;
+    private Button btnCoordinatorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRecyclerView = findViewById(R.id.btn_recycler_view);
         btnStatusBar = findViewById(R.id.btn_status_bar);
         btnDrawer = findViewById(R.id.btn_drawer);
+        btnCoordinatorLayout = findViewById(R.id.btn_coordinator_layout);
 
         btnBugly.setOnClickListener(this);
         btnAnimSet.setOnClickListener(this);
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRecyclerView.setOnClickListener(this);
         btnStatusBar.setOnClickListener(this);
         btnDrawer.setOnClickListener(this);
+        btnCoordinatorLayout.setOnClickListener(this);
 
 //        GsonTest1.test1();
 //        GsonTest1.test2();
@@ -99,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_drawer:
                 startActivity(new Intent(MainActivity.this, DrawerDemoActivity.class));
+                break;
+            case R.id.btn_coordinator_layout:
+                startActivity(new Intent(MainActivity.this, CoordinatorLayoutDemoActivity.class));
                 break;
         }
     }

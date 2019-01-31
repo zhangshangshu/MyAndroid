@@ -53,6 +53,15 @@
             android:name=".drawerlayout.NavigationViewActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".drawerlayout.DrawerDemoActivity" />
+        <activity android:name=".coordinatorlayout.CoordinatorLayout1Activity" />
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutDemoActivity" />
+        <activity
+            android:name=".coordinatorlayout.CoordinatorLayout2Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".coordinatorlayout.AppBarLayoutActivity"
+            android:theme="@style/CTLTheme" />
+        <activity android:name=".coordinatorlayout.ImageViewActivity"></activity>
     </application>
 
 </manifest>

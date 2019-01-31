@@ -8,9 +8,9 @@
     <!--android:checked="true" 设置当前选中，文字高亮 -->
     <item
         android:id="@+id/id2"
+        android:checked="true"
         android:icon="@mipmap/ic_launcher"
-        android:title="item2"
-        android:checked="true"/>
+        android:title="item2" />
 
     <!--group分组可以设置分界线，可设置单选-->
     <group
@@ -78,46 +78,95 @@
 
     <!--这种方式，也不能实现：分组含标题并且点击item后有选中背景的效果-->
     <!--<group-->
-        <!--android:checkableBehavior="single">-->
-        <!--&lt;!&ndash;android:checked="true" 设为选中&ndash;&gt;-->
-        <!--<item-->
-            <!--android:id="@+id/drawer_home"-->
-            <!--android:checked="true"-->
-            <!--android:icon="@mipmap/ic_launcher"-->
-            <!--android:title="Home"/>-->
-        <!--&lt;!&ndash;设置标题&ndash;&gt;-->
-        <!--<item-->
-            <!--android:id="@+id/section"-->
-            <!--android:icon="@mipmap/ic_launcher"-->
-            <!--android:title="分组1">-->
-            <!--<menu>-->
-                <!--<item-->
-                    <!--android:id="@+id/drawer_favourite"-->
-                    <!--android:icon="@mipmap/ic_launcher"-->
-                    <!--android:title="item12"/>-->
+    <!--android:checkableBehavior="single">-->
+    <!--&lt;!&ndash;android:checked="true" 设为选中&ndash;&gt;-->
+    <!--<item-->
+    <!--android:id="@+id/drawer_home"-->
+    <!--android:checked="true"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="Home"/>-->
+    <!--&lt;!&ndash;设置标题&ndash;&gt;-->
+    <!--<item-->
+    <!--android:id="@+id/section"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="分组1">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/drawer_favourite"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="item12"/>-->
 
-                <!--<item-->
-                    <!--android:id="@+id/drawer_downloaded"-->
-                    <!--android:icon="@mipmap/ic_launcher"-->
-                    <!--android:title="item12"/>-->
-            <!--</menu>-->
-        <!--</item>-->
-        <!--&lt;!&ndash;设置标题&ndash;&gt;-->
-        <!--<item-->
-            <!--android:id="@+id/section2"-->
-            <!--android:title="分组2">-->
-            <!--<menu>-->
-                <!--<item-->
-                    <!--android:id="@+id/drawer_more"-->
-                    <!--android:icon="@mipmap/ic_launcher"-->
-                    <!--android:title="item12"/>-->
+    <!--<item-->
+    <!--android:id="@+id/drawer_downloaded"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="item12"/>-->
+    <!--</menu>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;设置标题&ndash;&gt;-->
+    <!--<item-->
+    <!--android:id="@+id/section2"-->
+    <!--android:title="分组2">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/drawer_more"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="item12"/>-->
 
-                <!--<item-->
-                    <!--android:id="@+id/drawer_settings"-->
-                    <!--android:icon="@mipmap/ic_launcher"-->
-                    <!--android:title="item12"/>-->
-            <!--</menu>-->
-        <!--</item>-->
+    <!--<item-->
+    <!--android:id="@+id/drawer_settings"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="item12"/>-->
+    <!--</menu>-->
+    <!--</item>-->
     <!--</group>-->
 
+    <group android:checkableBehavior="single">
+
+        <!--这里 android:checked="true" ，点击其他item，选中背景会消失-->
+        <item
+            android:id="@+id/drawer_zss"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Zss" />
+
+        <item
+            android:id="@+id/section0"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Group1">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <!--这里 android:checked="true" ，点击其他item，选中背景不会消失-->
+                    <item
+                        android:id="@+id/drawer_home"
+                        android:icon="@mipmap/ic_launcher"
+                        android:title="Alarm" />
+                    <item
+                        android:id="@+id/drawer_favourite"
+                        android:icon="@mipmap/ic_launcher"
+                        android:title="Connected" />
+                </group>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/section"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Group2">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/drawer_downloaded"
+                        android:icon="@mipmap/ic_launcher"
+                        android:title="Computer" />
+                    <item
+                        android:id="@+id/drawer_more"
+                        android:icon="@mipmap/ic_launcher"
+                        android:title="Border" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@mipmap/ic_launcher"
+            android:title="FullScreen" />
+    </group>
 </menu>

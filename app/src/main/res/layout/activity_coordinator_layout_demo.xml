@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".coordinatorlayout.CoordinatorLayoutDemoActivity">
+    <Button
+        android:id="@+id/btn_coordinator1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="CoordinatorLayout + FloatingActionButton + Snackbar"/>
+    <Button
+        android:id="@+id/btn_coordinator2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="CoordinatorLayout + AppBarLayout嵌套TabLayout"/>
+    <Button
+        android:id="@+id/btn_coordinator3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="CollapsingToolbarLayout"/>
+    <Button
+        android:id="@+id/btn_coordinator4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ImageView"/>
+</LinearLayout>

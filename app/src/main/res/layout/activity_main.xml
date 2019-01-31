@@ -47,4 +47,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="DrawerLayout"/>
+
+    <Button
+        android:id="@+id/btn_coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="CoordinatorLayout"/>
 </LinearLayout>
